@@ -276,44 +276,19 @@ figure img {
 }
 
 /* -------------------------- Mobile full-width override -------------------------- */
+
 @media (max-width: 768px) {
 
   body {
     max-width: 100%;
     margin: 0;
-    padding: 0.9rem;        /* slightly tighter */
-    font-size: 0.9rem;     /* ✅ smaller text */
+    padding: 0;           /* remove all body padding */
+    font-size: 0.9rem;
     line-height: 1.4;
     text-align: left;
   }
 
   article {
-    max-width: 100%;
-    margin: 0;
-    padding: 0.9rem;
-  }
-
-  article p {
-    margin: 1.1rem 0;
-  }
-
-  img,
-  figure img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-  }
-
-  figure {
-    margin: 1.1rem 0;
-  }
-
-  figcaption {
-    text-align: left;
-    font-size: 0.7rem;
-  }
-
-  .poem {
     max-width: 100%;
     margin: 0;
     padding: 0;
@@ -323,21 +298,32 @@ figure img {
     width: 100%;
     flex-direction: column;
     height: auto;
+    margin: 0;
   }
 
   .essay-image,
   .essay-text {
     width: 100%;
     height: auto;
+    margin: 0;           /* ensure no margin anywhere */
+    padding: 0;          /* remove padding inside text */
   }
 
   .essay-text {
-    padding: 0.9rem;
     text-align: left;
   }
 
   .essay-text p {
     font-size: 0.9rem;
     line-height: 1.4;
+    margin: 0.8rem 0;    /* only vertical spacing */
   }
+
+  figure {
+    margin: 0;
+  }
+}
+
+.essay-text {
+  padding: 0 0.5rem;
 }
