@@ -208,7 +208,7 @@ figure img {
   color: #333;
 }
 
-/* ---------------- Responsive ---------------- */
+
 /* -------------------------- Mobile Full-Width Overrides -------------------------- */
 @media (max-width: 768px) {
 
@@ -226,7 +226,7 @@ figure img {
   article {
     max-width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 0.5rem;    /* small padding around articles */
   }
 
   article p {
@@ -265,10 +265,10 @@ figure img {
     object-position: center;
   }
 
-  /* Grey box text */
+  /* Grey box text with slight horizontal padding */
   .essay-text {
     text-align: left;
-    padding: 1rem;  /* optional tiny breathing space */
+    padding: 0.8rem 1rem;  /* vertical 0.8rem, horizontal 1rem */
   }
 
   .essay-text p {
@@ -297,12 +297,12 @@ figure img {
     font-size: 0.7rem;
   }
 
-  /* Poems — match article text size */
+  /* Poems — match article text size, slight padding */
   .poem {
     font-size: 0.9rem;
     line-height: 1.4;
     max-width: 100%;
-    margin: 1.5rem 0; /* vertical spacing only */
-    padding: 0;
+    margin: 1.5rem 0;   /* vertical spacing only */
+    padding: 0 1rem;    /* slight horizontal padding like essay-text */
   }
 }
