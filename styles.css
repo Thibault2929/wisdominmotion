@@ -278,18 +278,18 @@ figure img {
 /* -------------------------- Mobile full-width override -------------------------- */
 @media (max-width: 768px) {
 
-  body {
-    max-width: 100%;
-    padding: 1.2rem;
-    margin: 0;
-    text-align: left;
-  }
+ body {
+  max-width: 100%;
+  margin: 0;
+  padding: 1rem;   /* equal left & right */
+  text-align: left;
+}
 
-  article {
-    max-width: 100%;
-    margin: 0;
-    padding: 1.2rem;
-  }
+article {
+  max-width: 100%;
+  margin: 0;
+  padding: 1rem;   /* equal left & right */
+}
 
   article p {
     margin: 1.2rem 0;
