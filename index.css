@@ -174,7 +174,9 @@ footer a:hover {
     text-align: left;
     font-size: 0.8rem;
     font-weight: 500;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.1em;   /* ← THIS is the key */
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
   }
 
   /* Title */
