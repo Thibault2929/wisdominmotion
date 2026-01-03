@@ -99,7 +99,7 @@ article p em {
   font-size: 0.9rem;
   color: #222;
   margin-top: 0.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 0rem;
   text-align: right;
 }
 
@@ -271,11 +271,12 @@ figure img {
 
   .poem-article + footer,
   .poem + footer {
-    padding: 0 1rem 0 1rem;
+    padding: 0 1rem 2rem 1rem;   /* bottom padding added for gap */
   }
 
   .essay-footer-container {
     max-width: 100%;
-    padding: 0 1.2rem;
+    padding: 0 1.2rem 2rem 1.2rem; /* bottom padding added for gap */
   }
+
 }
