@@ -208,15 +208,20 @@ figure img {
   color: #333;
 }
 
+/* Poems should not inherit wide article padding on desktop */
+
+article:has(.poem) {
+  padding: 3rem 6rem;
+}
+
 /* -------------------------- Poem (Desktop) -------------------------- */
 
 .poem {
   max-width: 700px;
-  margin: 2.5rem auto;   /* centered on desktop */
+  margin: 2.5rem auto;
   padding: 0 1rem;
   text-align: left;
 }
-
 
 /* -------------------------- Mobile Full-Width Overrides -------------------------- */
 @media (max-width: 768px) {
