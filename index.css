@@ -179,17 +179,17 @@ footer a:hover {
 
   /* Title */
   .essay-text h2 {
-    font-size: 1.85rem;
+    font-size: 2.0 rem;
     font-weight: 500;
     line-height: 1.15;
   }
 
   /* Preview paragraph — THIS was missing */
   .essay-text p {
-    font-size: 1.05rem;
-    font-weight: 400;
+    font-size: 1.0rem;
+    font-weight: 500;
     line-height: 1.6;
-    letter-spacing: 0.015em;
+    letter-spacing: 0.01em;
   }
 }
 
