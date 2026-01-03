@@ -290,13 +290,15 @@ figure img {
     text-align: left;
     font-size: 0.75rem;
   }
-
-  /* Mobile: Poems full-width without narrowing */
+/* Mobile: poems almost edge-to-edge for better line flow */
 .poem-article, .poem {
   max-width: 100%;
   width: 100%;
   margin: 1.2rem 0;
-  padding: 0;                /* ⬅ remove inner padding */
+  padding-left: 0.4rem;   /* ⬅ much smaller left gap */
+  padding-right: 0.4rem;  /* ⬅ match right side */
+  padding-top: 0;
+  padding-bottom: 0;
   text-align: justify;
   box-sizing: border-box;
 }
