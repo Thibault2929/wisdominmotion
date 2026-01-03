@@ -210,8 +210,10 @@ figure img {
 
 /* -------------------------- Poem (Desktop) -------------------------- */
 
-.poem-article {
-  padding: 3rem 6rem;
+article .poem {
+  max-width: 700px;  /* or whatever width you want */
+  margin: 0 auto;    /* center it */
+  padding: 0 3rem;   /* space on left and right */
 }
 
 /* -------------------------- Mobile Full-Width Overrides -------------------------- */
