@@ -305,8 +305,8 @@ figure img {
   max-width: 100%;
   width: 100%;
   margin: 1.2rem 0;
-  padding-left: 0.1rem;   /* ⬅ much smaller left gap */
-  padding-right: 0.1rem;  /* ⬅ match right side */
+  padding-left: 0.4rem;   /* ⬅ much smaller left gap */
+  padding-right: 0.4rem;  /* ⬅ match right side */
   padding-top: 0;
   padding-bottom: 0;
   text-align: justify;
