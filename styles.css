@@ -216,14 +216,14 @@ figure img {
     text-align: justify;
   }
 
-    /* Articles full width with comfortable padding */
+  /* Articles full width with comfortable padding */
   article {
     max-width: 100%;
     margin: 0;
     padding: 1.2rem 1.4rem;
   }
 
-    article p {
+  article p {
     margin: 1.3rem 0;
     font-size: 1.05rem;
     font-weight: 500;
@@ -232,8 +232,9 @@ figure img {
     letter-spacing: 0.02em;
   }
 
-    .poem p {
-    font-size: 0.9rem;
+  /* Poem text */
+  .poem p {
+    font-size: 0.95rem;        /* slightly bigger for readability */
     font-weight: 500;
     line-height: 1.6;
     letter-spacing: 0.02em;
@@ -300,35 +301,33 @@ figure img {
     text-align: left;
     font-size: 0.75rem;
   }
-/* Mobile: poems almost edge-to-edge for better line flow */
-.poem-article, .poem {
-  max-width: 100%;
-  width: 100%;
-  margin: 1.2rem 0;
-  padding-left: 0.4rem;   /* ⬅ much smaller left gap */
-  padding-right: 0.4rem;  /* ⬅ match right side */
-  padding-top: 0;
-  padding-bottom: 0;
-  text-align: justify;
-  box-sizing: border-box;
-}
+
+  /* ---------------- Poem container ---------------- */
+  .poem-article, .poem {
+    max-width: 100%;
+    width: 100%;
+    margin: 0.8rem 0;           /* minimal vertical spacing */
+    padding: 0.8rem;            /* small breathing space all around */
+    text-align: justify;
+    box-sizing: border-box;
+  }
 
   .poem-article figure, .poem figure {
-    margin: 0 0 0.8rem 0; 
+    margin: 0 0 0.8rem 0;
   }
 
   .poem-article p, .poem p {
-    margin: 1rem 0;         
+    margin: 0.8rem 0;           
   }
 
   .poem-article .meta, .poem .meta {
-    margin-top: 0.8rem;
+    margin-top: 0.8rem;         
     margin-bottom: 0;
   }
 
   .poem-article + footer, 
   .poem + footer {
-    margin-top: 0.8rem;     
+    margin-top: 0.8rem;         
     padding-top: 0;
   }
 }
