@@ -20,8 +20,6 @@ body {
 }
 
 /* -------------------------- Headings -------------------------- */
-
-/* Main site title */
 h1 {
   font-family: 'Bebas Neue', sans-serif;
   font-weight: 400;          
@@ -33,7 +31,6 @@ h1 {
   margin-bottom: 1rem;
 }
 
-/* Subtitles and smaller headings */
 h2, h3 {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
@@ -43,7 +40,6 @@ h2, h3 {
   margin-bottom: 0.8rem;
 }
 
-/* Site header overrides (if used) */
 .site-header h1 {
   font-size: 3.5rem;
   margin: 2rem 0 1rem 0;
@@ -64,40 +60,41 @@ article {
   margin: 1.5rem 4.5rem auto;
 }
 
-/* -------------------------- Poem Layout (Desktop + Mobile) -------------------------- */
+/* -------------------------- Poem Layout Unified with Essay -------------------------- */
 .poem-article, .poem {
-  max-width: 700px;           /* constrain width for readability */
-  margin: 2rem auto 1rem auto; /* top 2rem, bottom 1rem reduces footer gap */
-  padding: 1.5rem 2rem;       /* breathing space inside grey box */
-  text-align: left;           /* keep text left-aligned */
-  box-sizing: border-box;     /* include padding in width */
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  text-align: left;
+  box-sizing: border-box;
 }
 
-/* Reduce gap between image and poem text */
 .poem-article figure, .poem figure {
-  margin: 0 0 1rem 0;         /* bottom margin only, smaller than default */
+  margin-bottom: 1rem;
 }
 
-/* Paragraphs inside poem */
 .poem-article p, .poem p {
-  margin: 1rem 0;             /* slightly tighter vertical spacing */
+  margin: 1rem 0;
   line-height: 1.5;
   font-size: 1rem;
 }
 
-/* Meta text (Published ...) inside poem */
 .poem-article .meta, .poem .meta {
-  margin-top: 1rem;           /* closer to last poem paragraph */
-  margin-bottom: 0;           /* remove extra bottom gap */
-  text-align: right;           /* aligns with poem text */
+  text-align: right;
   font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
 }
 
-/* Optional: reduce space below poem before footer */
 .poem-article + footer, 
-.poem + footer {
-  margin-top: 1rem;           /* smaller gap */
-  padding-top: 0;
+.poem + footer,
+.poem-article .back-to-essays,
+.poem .back-to-essays {
+  padding: 2.2rem 1.6rem;
+  text-align: left;
+  margin-top: 0;
 }
 
 /* Italic text */
@@ -155,17 +152,16 @@ figure img {
 }
 
 /* ---------------- Index essay preview layout ---------------- */
-
 .essay-preview {
   display: flex;
   gap: 0;
-  width: 100%;      
+  width: 100%;
   height: 50vh;
   margin: 0;
 }
 
 .essay-text {
-  flex: 1;              
+  flex: 1;
   height: 100%;
 }
 
@@ -176,18 +172,18 @@ figure img {
 .essay-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;    
+  object-fit: cover;
   object-position: center;
   display: block;
 }
 
 .essay-text {
-  background-color: #f2f2f2; 
-  padding: 1.5rem;             
+  background-color: #f2f2f2;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;   
-  text-align: center;        
+  justify-content: center;
+  text-align: center;
 }
 
 .essay-text h2 {
@@ -195,9 +191,9 @@ figure img {
 }
 
 .essay-text p {
-  margin: 1.5;
+  margin: 1.5rem 0;
   font-family: 'Spectral', serif;
-  font-size: 1.0rem;
+  font-size: 1rem;
   line-height: 1.5;
   color: #333;
 }
@@ -205,18 +201,16 @@ figure img {
 /* -------------------------- Mobile Full-Width Overrides -------------------------- */
 @media (max-width: 768px) {
 
-  /* Body fills screen, subtle breathing space */
   body {
     max-width: 100%;
     margin: 0;
     padding: 0;
     font-size: 1.05rem;
-    font-weight: 400;          /* heavier than 300 */
+    font-weight: 400;
     line-height: 1.6;
     text-align: justify;
   }
 
-  /* Articles full width with comfortable padding */
   article {
     max-width: 100%;
     margin: 0;
@@ -232,15 +226,13 @@ figure img {
     letter-spacing: 0.02em;
   }
 
-  /* Poem text */
   .poem p {
-    font-size: 0.95rem;        /* slightly bigger for readability */
+    font-size: 0.95rem;
     font-weight: 500;
     line-height: 1.6;
     letter-spacing: 0.02em;
   }
 
-  /* Essay preview containers */
   .essay-preview,
   .essay-preview.reverse {
     width: 100%;
@@ -249,7 +241,6 @@ figure img {
     margin: 0;
   }
 
-  /* Images and grey box fill width */
   .essay-image,
   .essay-text {
     width: 100%;
@@ -257,7 +248,6 @@ figure img {
     margin: 0;
   }
 
-  /* Consistent image rectangle */
   .essay-image {
     aspect-ratio: 3 / 4;
   }
@@ -269,14 +259,13 @@ figure img {
     object-position: center;
   }
 
-  /* Grey box text */
   .essay-text {
     text-align: justify;
     padding: 1.2rem 1.4rem;
   }
 
   .essay-text p {
-    font-size: 1.0rem;
+    font-size: 1rem;
     line-height: 1.5;
   }
 
@@ -292,7 +281,6 @@ figure img {
     font-size: 0.75rem;
   }
 
-  /* Figures */
   figure {
     margin: 0;
   }
@@ -302,40 +290,47 @@ figure img {
     font-size: 0.75rem;
   }
 
-  /* ---------------- Poem container ---------------- */
+  /* Mobile poem container matching essays */
   .poem-article, .poem {
     max-width: 100%;
     width: 100%;
-    margin: 0.8rem 0;           /* minimal vertical spacing */
-    padding: 0.8rem;            /* small breathing space all around */
+    margin: 0.8rem 0;
+    padding: 0.8rem;
     text-align: justify;
     box-sizing: border-box;
   }
 
   .poem-article figure, .poem figure {
-    margin: 0 0 0.8rem 0;
+    margin-bottom: 0.8rem;
   }
 
   .poem-article p, .poem p {
-    margin: 0.8rem 0;           
+    margin: 0.8rem 0;
   }
 
   .poem-article .meta, .poem .meta {
-    margin-top: 0.8rem;         
+    margin-top: 0.8rem;
     margin-bottom: 0;
+    text-align: right;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.4;
   }
 
-  .poem-article + footer, 
-  .poem + footer {
-    margin-top: 0.8rem;         
-    padding-top: 0;
+  .poem-article + footer,
+  .poem + footer,
+  .poem-article .back-to-essays,
+  .poem .back-to-essays {
+    padding: 2.2rem 1.6rem;
+    text-align: left;
+    margin-top: 0;
   }
 }
 
 /* Footer / Back to essays */
 footer,
 .back-to-essays {
-  padding: 2.2rem 1.6rem;  
+  padding: 2.2rem 1.6rem;
 }
 
 /* Meta text alignment for poems */
