@@ -212,30 +212,31 @@ figure img {
 /* -------------------------- Mobile Full-Width Overrides -------------------------- */
 @media (max-width: 768px) {
 
-  /* Body fills screen, no extra padding */
+  /* Body fills screen, subtle breathing space */
   body {
     max-width: 100%;
     margin: 0;
     padding: 0;
-    font-size: 0.9rem;   /* slightly smaller text for mobile */
-    line-height: 1.4;
-    text-align: left;
+    font-size: 1.0rem;     /* slightly bigger for readability */
+    line-height: 1.5;
+    text-align: justify;  /* justify text */
   }
 
-  /* Articles full width, no extra padding */
+  /* Articles full width with comfortable padding */
   article {
     max-width: 100%;
     margin: 0;
-    padding: 0.5rem;    /* small padding around articles */
+    padding: 1.2rem 1.4rem;  /* more space left & right */
   }
 
   article p {
-    margin: 1.1rem 0;   /* vertical spacing only */
-    font-size: 0.9rem;  /* match body text */
-    line-height: 1.4;
+    margin: 1.3rem 0;
+    font-size: 1.0rem;
+    line-height: 1.5;
+    text-align: justify;
   }
 
-  /* Essay preview containers stack vertically and fill width */
+  /* Essay preview containers */
   .essay-preview,
   .essay-preview.reverse {
     width: 100%;
@@ -250,12 +251,11 @@ figure img {
     width: 100%;
     height: auto;
     margin: 0;
-    padding: 0;
   }
 
-  /* Force consistent rectangle for images on mobile */
+  /* Consistent image rectangle */
   .essay-image {
-    aspect-ratio: 3 / 4;  /* 3 vertically, 4 horizontally */
+    aspect-ratio: 3 / 4;
   }
 
   .essay-image img {
@@ -265,44 +265,52 @@ figure img {
     object-position: center;
   }
 
-  /* Grey box text with slight horizontal padding */
+  /* Grey box text */
   .essay-text {
-    text-align: left;
-    padding: 0.8rem 1rem;  /* vertical 0.8rem, horizontal 1rem */
+    text-align: justify;
+    padding: 1.2rem 1.4rem; /* more breathing space */
   }
 
   .essay-text p {
-    font-size: 0.9rem;
-    line-height: 1.4;
+    font-size: 1.0rem;
+    line-height: 1.5;
   }
 
   .essay-text h2 {
-    font-size: 1.7rem;
+    font-size: 1.75rem;
     line-height: 1.2;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.9rem;
+    text-align: left; /* titles read better left-aligned */
   }
 
   .article-index {
     text-align: left;
-    font-size: 0.75rem;  /* optional smaller on mobile */
+    font-size: 0.75rem;
   }
 
-  /* Remove any default figure margins */
+  /* Figures */
   figure {
     margin: 0;
   }
 
   figcaption {
     text-align: left;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
   }
 
-  /* Poems — match article text size, slight padding */
+  /* Poems — identical to article text */
   .poem {
-    font-size: 0.9rem;
-    line-height: 1.4;
+    font-size: 1.0rem;
+    line-height: 1.5;
     max-width: 100%;
-    margin: 1.5rem 0;   /* vertical spacing only */
-    padding: 0 1rem;    /* slight horizontal padding like essay-text */
+    margin: 1.6rem 0;
+    padding: 0 1.4rem;
+    text-align: justify;
+  }
+
+  /* Footer / Back to essays */
+  footer,
+  .back-to-essays {
+    padding: 2.2rem 1.6rem;  /* more space top/bottom & left */
   }
 }
