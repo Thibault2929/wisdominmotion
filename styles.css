@@ -101,12 +101,17 @@ article {
   margin: 1.5rem 4.5rem auto;
 }
 
-/* Poems should not be pushed by wide article padding */
-.poem-article {
-  padding: 3rem 6rem;   /* top/bottom 3rem, left/right 6rem */
-  max-width: 900px;     /* optional: constrain width for better readability */
-  margin: 1.5rem auto;  /* centers it horizontally */
+/* -------------------------- Poem Centered in Grey Box -------------------------- */
+
+/* -------------------------- Poem Layout -------------------------- */
+.poem-article, .poem {
+  max-width: 900px;         /* constrain width for readability */
+  margin: 2rem auto;        /* centers horizontally on desktop */
+  padding: 1.5rem 2rem;     /* breathing space inside grey box */
+  text-align: left;         /* keep text left-aligned */
+  box-sizing: border-box;   /* padding included in width */
 }
+
 
 /* Paragraphs */
 article p {
@@ -215,14 +220,6 @@ figure img {
   color: #333;
 }
 
-/* -------------------------- Poem (Desktop) -------------------------- */
-
-article .poem {
-  max-width: 700px;  /* or whatever width you want */
-  margin: 0 auto;    /* center it */
-  padding: 0 3rem;   /* space on left and right */
-}
-
 /* -------------------------- Mobile Full-Width Overrides -------------------------- */
 @media (max-width: 768px) {
 
@@ -312,19 +309,26 @@ article .poem {
     font-size: 0.75rem;
   }
 
-  /* Poems — identical to article text */
-  .poem {
-    font-size: 1.0rem;
-    line-height: 1.5;
+  .poem-article, .poem {
     max-width: 100%;
+    width: 100%;
     margin: 1.6rem 0;
     padding: 0 1.4rem;
     text-align: justify;
+    box-sizing: border-box;
   }
+}
 
   /* Footer / Back to essays */
   footer,
   .back-to-essays {
     padding: 2.2rem 1.6rem;  /* more space top/bottom & left */
   }
+
+
+/* Optional: reduce space below poem before footer */
+.poem-article + footer, 
+.poem + footer {
+  margin-top: 1.5rem;       /* reduce if gap is too big */
+  padding-top: 0;            /* remove extra padding */
 }
