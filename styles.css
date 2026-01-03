@@ -101,6 +101,13 @@ article {
   margin: 1.5rem 4.5rem auto;
 }
 
+/* Poems should not be pushed by wide article padding */
+.poem-article {
+  padding: 3rem 6rem;   /* top/bottom 3rem, left/right 6rem */
+  max-width: 900px;     /* optional: constrain width for better readability */
+  margin: 1.5rem auto;  /* centers it horizontally */
+}
+
 /* Paragraphs */
 article p {
   margin: 1.5rem 0;
