@@ -163,28 +163,38 @@ footer a:hover {
     object-fit: cover;
   }
 
+  /* Text container spacing */
   .essay-text {
-    padding: 1.5rem;
-    font-size: 1.05rem;
-    font-weight: 500;
-    text-align: left; /* NOT centered */
-  }
-
-  .article-index {
+    padding: 1.2rem 1.3rem;
     text-align: left;
   }
 
+  /* Category label */
+  .article-index {
+    text-align: left;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+  }
+
+  /* Title */
   .essay-text h2 {
-    font-size: 1.9rem;
+    font-size: 1.85rem;
     font-weight: 500;
     line-height: 1.15;
+  }
+
+  /* Preview paragraph — THIS was missing */
+  .essay-text p {
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.015em;
   }
 }
 
 @media (max-width: 480px) {
   .essay-text h2 {
-    font-size: 1.45rem;
-    font-weight: 500;
-    line-height: 1.15;
+    font-size: 1.5rem;
   }
 }
